@@ -1,6 +1,11 @@
 # Django TDD ep2
 
 
+<p align="left">
+  <img src="./.img/upgrades.gif" width="400"/>
+</p>
+
+
 
 
 
