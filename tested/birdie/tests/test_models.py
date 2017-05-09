@@ -4,7 +4,10 @@ from mixer.backend.django import mixer
 
 pytestmark = pytest.mark.django_db
 
+@pytest.mark.django_db
 class TestPostModel:
-    def test_smoke_test(self):
-        assert 1 is 2 ,'We expect this fail'
+
+    def test_model(self):
+        obj = mixer.blend('birdie.Post')
+        assert obj.pk == 1, 'Should create a Post instance'
 

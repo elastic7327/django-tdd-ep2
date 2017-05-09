@@ -1,10 +1,9 @@
 *.pyc
 db.sqlite3
 
-
-131
-down vote
-Github has a great boilerplate .gitignore
+#131
+#down vote
+#Github has a great boilerplate .gitignore
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -12,6 +11,10 @@ __pycache__/
 
 # C extensions
 *.so
+
+# coverage 
+#
+tested/htmlcov/*
 
 # Distribution / packaging
 bin/
