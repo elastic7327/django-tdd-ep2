@@ -1,1 +1,2 @@
-# django_pytest_with_coverage
+# Django TDD ep2
+
