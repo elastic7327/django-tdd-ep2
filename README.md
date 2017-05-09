@@ -4,15 +4,13 @@
 
 
 
-ref : 
+## ref : 
 
-# pytest
+## pytest
 https://docs.pytest.org/en/latest/getting-started.html
-
-# pytest-django
+#
+## pytest-django
 http://pytest-django.readthedocs.io/en/latest/managing_python_path.html 
-
-#mixer
+#
+## mixer
 http://mixer.readthedocs.io/en/latest/index.html
-
-
