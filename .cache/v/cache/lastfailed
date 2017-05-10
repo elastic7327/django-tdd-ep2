@@ -1,3 +1,4 @@
 {
+  "tested/birdie/tests/test_admin.py": true,
   "tested/birdie/tests/test_models.py": true
 }
