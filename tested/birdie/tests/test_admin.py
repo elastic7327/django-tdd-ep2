@@ -9,10 +9,15 @@ from mixer.backend.django import mixer
 
 pytestmark = pytest.mark.django_db
 
-from birdie.models import Post
-from birdie.admin import admin
+from birdie import admin
+from birdie import models
 
 class TestPostAdmin:
     def test_excerot(self):
         obj = mixer.blend('birdie.Post')
-        assert 1 is 1
+        site = AdminSite()
+        post_admin = admin.PostAdmin(models.Post, site)
+
+        obj = mixer.blend('birdie.Post', body='Hello World')
+        res = post_admin.excerpt(obj)
+        assert res == 'Hello', 'Should return first few characters'

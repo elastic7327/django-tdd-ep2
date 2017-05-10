@@ -7,8 +7,7 @@ import pytest
 from mixer.backend.django import mixer
 
 pytestmark = pytest.mark.django_db
-
-@pytest.mark.django_db
+# @pytest.mark.django_db
 class TestPostModel:
 
     def test_model(self):
