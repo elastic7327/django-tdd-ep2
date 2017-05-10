@@ -7,6 +7,8 @@ from django.test import RequestFactory
 from django.contrib.auth.models import AnonymousUser
 from mixer.backend.django import mixer
 
+pytestmark = pytest.mark.django_db
+
 from birdie import views
 
 class TestHomeView():
@@ -32,9 +34,12 @@ class TestAdminView():
         resp = views.AdminView.as_view()(req)
         # assert resp.status_code == 302
         # assert '/account/login/?next=/' in resp.url
-        assert '/login/' in resp.url
+        assert '/login/' in resp.url, 'Should be redirect to login'
 
     def test_superuser(self):
         user = mixer.blend('auth.User', is_superuser=True)
         req = RequestFactory().get('/')
         req.user = user
+        resp = views.AdminView.as_view()(req)
+        assert resp.status_code == 200, 'Should be callable by superuser'
+
